@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>دعوة زفاف كيرلس وإيريني</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Cairo:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background: #f8f3ec;
+      color: #5c493c;
+      font-family: "Cairo", sans-serif;
+      text-align: center;
+      overflow-x: hidden;
+    }
+
+    .page {
+      max-width: 650px;
+      margin: auto;
+      background: #fffaf4;
+      min-height: 100vh;
+      box-shadow: 0 0 30px rgba(0,0,0,.08);
+    }
+
+    section {
+      padding: 55px 25px;
+    }
+
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      background:
+        linear-gradient(rgba(255,250,244,.82),rgba(255,250,244,.92)),
+        url("https://images.unsplash.com/photo-1519225421980-715cb0215aed?auto=format&fit=crop&w=1000&q=80")
+        center/cover;
+    }
+
+    .small {
+      font-size: 17px;
+      letter-spacing: 2px;
+      color: #96765d;
+      margin-bottom: 15px;
+    }
+
+    h1 {
+      font-family: "Amiri", serif;
+      font-size: 55px;
+      font-weight: 700;
+      color: #765c49;
+      line-height: 1.3;
+    }
+
+    .amp {
+      font-family: "Amiri", serif;
+      font-size: 38px;
+      color: #b29478;
+      margin: 5px 0;
+    }
+
+    .date {
+      margin-top: 25px;
+      font-size: 19px;
+      color: #765c49;
+    }
+
+    .divider {
+      width: 80px;
+      height: 1px;
+      background: #b99b7e;
+      margin: 25px auto;
+    }
+
+    .verse {
+      font-family: "Amiri", serif;
+      font-size: 21px;
+      line-height: 2;
+      color: #705745;
+    }
+
+    .invite {
+      font-size: 17px;
+      line-height: 2;
+    }
+
+    .parents {
+      margin: 25px 0;
+      line-height: 2.2;
+      font-family: "Amiri", serif;
+      font-size: 21px;
+    }
+
+    .names {
+      margin: 25px 0;
+    }
+
+    .names .label {
+      font-size: 16px;
+      color: #96765d;
+    }
+
+    .names .name {
+      font-family: "Amiri", serif;
+      font-size: 32px;
+      color: #765c49;
+      font-weight: bold;
+    }
+
+    .info {
+      margin-top: 25px;
+      padding: 25px 15px;
+      border-top: 1px solid #d9c5b0;
+      border-bottom: 1px solid #d9c5b0;
+      line-height: 2.2;
+    }
+
+    .info-title {
+      font-family: "Amiri", serif;
+      font-size: 25px;
+      color: #765c49;
+    }
+
+    .location {
+      display: inline-block;
+      margin-top: 12px;
+      padding: 10px 20px;
+      border-radius: 30px;
+      background: #8c715b;
+      color: white;
+      text-decoration: none;
+      font-size: 14px;
+    }
+
+    .photo {
+      width: 100%;
+      height: 420px;
+      object-fit: cover;
+      display: block;
+    }
+
+    .photo-box {
+      margin: 20px 0;
+      overflow: hidden;
+    }
+
+    .henna {
+      background: #f2e7da;
+    }
+
+    .countdown {
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      direction: ltr;
+      margin-top: 25px;
+    }
+
+    .counter {
+      width: 75px;
+      padding: 12px 5px;
+      background: #fff;
+      border: 1px solid #d9c5b0;
+      border-radius: 8px;
+    }
+
+    .counter span {
+      display: block;
+      font-size: 25px;
+      font-weight: bold;
+      color: #765c49;
+    }
+
+    .counter small {
+      color: #96765d;
+    }
+
+    .music {
+      position: fixed;
+      left: 18px;
+      top: 18px;
+      z-index: 10;
+      width: 42px;
+      height: 42px;
+      border: none;
+      border-radius: 50%;
+      background: #8c715b;
+      color: white;
+      font-size: 18px;
+      cursor: pointer;
+    }
+
+    footer {
+      padding: 35px 20px;
+      color: #96765d;
+      font-family: "Amiri", serif;
+      font-size: 19px;
+    }
+
+    @media(max-width:500px) {
+      h1 {
+        font-size: 45px;
+      }
+
+      section {
+        padding: 45px 20px;
+      }
+
+      .photo {
+        height: 350px;
+      }
+
+      .counter {
+        width: 65px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<div class="page">
+
+  <!-- زر الموسيقى -->
+  <button class="music" onclick="toggleMusic()">♪</button>
+
+  <!-- الموسيقى
+       بعدين هنضيف ملف الأغنية هنا -->
+  <audio id="music" loop>
+    <source src="song.mp3" type="audio/mpeg">
+  </audio>
+
+  <!-- البداية -->
+  <section class="hero">
+    <div class="small">دعوة زفاف</div>
+
+    <h1>كيرلس</h1>
+
+    <div class="amp">&</div>
+
+    <h1>إيريني</h1>
+
+    <div class="divider"></div>
+
+    <div class="date">
+      24 أغسطس 2026
+    </div>
+  </section>
+
+
+  <!-- الآية -->
+  <section>
+    <div class="verse">
+      "لأَنَّكُمْ فِي قَلْبِي، أَنْتُمْ الَّذِينَ فِي رِبَاطٍ وَاحِدٍ مَعِي فِي النِّعْمَةِ."
+      <br>
+      — فيلبي 1: 7
+    </div>
+  </section>
+
+
+  <!-- الدعوة -->
+  <section>
+
+    <div class="invite">
+      يتشرف كل من
+    </div>
+
+    <div class="parents">
+      الأسرة الكريمة
+    </div>
+
+    <div class="invite">
+      بدعوتكم لحضور
+    </div>
+
+    <div class="names">
+      <div class="label">الابن المبارك</div>
+      <div class="name">كيرلس مجدي</div>
+    </div>
+
+    <div class="names">
+      <div class="label">والابنة المباركة</div>
+      <div class="name">إيريني شحاتة</div>
+    </div>
+
+    <div class="invite">
+      لحضور صلاة الإكليل المبارك
+    </div>
+
+  </section>
+
+
+  <!-- الكنيسة -->
+  <section>
+    <div class="info">
+
+      <div class="info-title">
+        ⛪ صلاة الإكليل المبارك
+      </div>
+
+      <p>
+        كنيسة مارمينا والبابا كيرلس
+      </p>
+
+      <p>
+        يوم الاثنين 24 أغسطس 2026
+      </p>
+
+      <a class="location"
+         href="https://www.google.com/maps"
+         target="_blank">
+        📍 موقع الكنيسة على الخريطة
+      </a>
+
+    </div>
+  </section>
+
+
+  <!-- صورة -->
+  <div class="photo-box">
+    <img
+      class="photo"
+      src="https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=1000&q=80"
+      alt="Wedding">
+  </div>
+
+
+  <!-- القاعة -->
+  <section>
+
+    <div class="info">
+
+      <div class="info-title">
+        💍 حفل الزفاف
+      </div>
+
+      <p>
+        القاعة: ليلة العمر
+      </p>
+
+      <a class="location"
+         href="https://www.google.com/maps"
+         target="_blank">
+        📍 موقع القاعة على الخريطة
+      </a>
+
+    </div>
+
+  </section>
+
+
+  <!-- آية -->
+  <section>
+    <div class="verse">
+      "وَأَمَّا أَنَا وَبَيْتِي فَنَعْبُدُ الرَّبَّ."
+      <br>
+      — يشوع 24: 15
+    </div>
+  </section>
+
+
+  <!-- صورة ثانية -->
+  <div class="photo-box">
+    <img
+      class="photo"
+      src="https://images.unsplash.com/photo-1511285560929-80b456fea0bc?auto=format&fit=crop&w=1000&q=80"
+      alt="Wedding">
+  </div>
+
+
+  <!-- الحنة -->
+  <section class="henna">
+
+    <div class="info-title">
+      🎉 الحنة 🎉
+    </div>
+
+    <div class="divider"></div>
+
+    <p>
+      قريبًا سيتم الإعلان عن تفاصيل الحنة
+    </p>
+
+  </section>
+
+
+  <!-- العد التنازلي -->
+  <section>
+
+    <div class="info-title">
+      متبقي على مشاركتنا الفرحة ❤️
+    </div>
+
+    <div class="countdown">
+
+      <div class="counter">
+        <span id="days">00</span>
+        <small>يوم</small>
+      </div>
+
+      <div class="counter">
+        <span id="hours">00</span>
+        <small>ساعة</small>
+      </div>
+
+      <div class="counter">
+        <span id="minutes">00</span>
+        <small>دقيقة</small>
+      </div>
+
+      <div class="counter">
+        <span id="seconds">00</span>
+        <small>ثانية</small>
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <footer>
+    كيرلس & إيريني ❤️
+    <br>
+    24 • 8 • 2026
+  </footer>
+
+</div>
+
+
+<script>
+
+  /* العد التنازلي */
+  const weddingDate =
+    new Date("August 24, 2026 19:00:00").getTime();
+
+  function countdown() {
+
+    const now = new Date().getTime();
+    const distance = weddingDate - now;
+
+    if (distance <= 0) {
+      document.getElementById("days").innerHTML = "00";
+      document.getElementById("hours").innerHTML = "00";
+      document.getElementById("minutes").innerHTML = "00";
+      document.getElementById("seconds").innerHTML = "00";
+      return;
+    }
+
+    const days =
+      Math.floor(distance / (1000 * 60 * 60 * 24));
+
+    const hours =
+      Math.floor(
+        (distance % (1000 * 60 * 60 * 24))
+        / (1000 * 60 * 60)
+      );
+
+    const minutes =
+      Math.floor(
+        (distance % (1000 * 60 * 60))
+        / (1000 * 60)
+      );
+
+    const seconds =
+      Math.floor(
+        (distance % (1000 * 60))
+        / 1000
+      );
+
+    document.getElementById("days").innerHTML =
+      String(days).padStart(2, "0");
+
+    document.getElementById("hours").innerHTML =
+      String(hours).padStart(2, "0");
+
+    document.getElementById("minutes").innerHTML =
+      String(minutes).padStart(2, "0");
+
+    document.getElementById("seconds").innerHTML =
+      String(seconds).padStart(2, "0");
+  }
+
+  setInterval(countdown, 1000);
+  countdown();
+
+
+  /* الموسيقى */
+  const music = document.getElementById("music");
+
+  function toggleMusic() {
+
+    if (music.paused) {
+      music.play();
+    } else {
+      music.pause();
+    }
+
+  }
+
+</script>
+
+</body>
+</html>
