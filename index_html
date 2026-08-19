@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>كيرلس & إيريني | Wedding</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Cairo:wght@300;400;600&display=swap" rel="stylesheet">
+
+<style>
+*{
+  box-sizing:border-box;
+  margin:0;
+  padding:0;
+}
+
+body{
+  background:#eee7de;
+  color:#655244;
+  font-family:"Cairo",sans-serif;
+}
+
+.page{
+  max-width:650px;
+  margin:auto;
+  background:#fffaf5;
+  min-height:100vh;
+  overflow:hidden;
+}
+
+section{
+  padding:60px 25px;
+  text-align:center;
+}
+
+.hero{
+  min-height:100vh;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  background:
+  linear-gradient(rgba(255,250,245,.80),rgba(255,250,245,.92)),
+  url("https://images.unsplash.com/photo-1519225421980-715cb0215aed?auto=format&fit=crop&w=1200&q=85")
+  center/cover;
+}
+
+.subtitle{
+  font-size:15px;
+  letter-spacing:4px;
+  color:#9b7c62;
+  margin-bottom:15px;
+}
+
+.names{
+  font-family:"Amiri",serif;
+  color:#745b48;
+  font-size:62px;
+  line-height:1.1;
+}
+
+.and{
+  font-family:"Amiri",serif;
+  color:#b09275;
+  font-size:38px;
+  margin:5px 0;
+}
+
+.date{
+  margin-top:25px;
+  font-family:"Amiri",serif;
+  font-size:24px;
+  color:#806650;
+}
+
+.line{
+  width:75px;
+  height:1px;
+  background:#b99a7c;
+  margin:25px auto;
+}
+
+.verse{
+  font-family:"Amiri",serif;
+  font-size:22px;
+  line-height:2.1;
+  color:#725946;
+}
+
+.invitation{
+  font-size:17px;
+  line-height:2.2;
+}
+
+.couple{
+  margin:25px 0;
+}
+
+.label{
+  color:#a08368;
+  font-size:15px;
+}
+
+.couple-name{
+  font-family:"Amiri",serif;
+  font-size:35px;
+  color:#765b47;
+}
+
+.event{
+  padding:30px 15px;
+  margin:20px 0;
+  border-top:1px solid #d8c3ad;
+  border-bottom:1px solid #d8c3ad;
+}
+
+.event-title{
+  font-family:"Amiri",serif;
+  font-size:28px;
+  color:#765b47;
+  margin-bottom:10px;
+}
+
+.event p{
+  line-height:2;
+  font-size:16px;
+}
+
+.map{
+  display:inline-block;
+  margin-top:15px;
+  padding:10px 22px;
+  border-radius:30px;
+  background:#8b7059;
+  color:white;
+  text-decoration:none;
+  font-size:14px;
+}
+
+.photo{
+  width:100%;
+  height:430px;
+  object-fit:cover;
+  display:block;
+}
+
+.henna{
+  background:#f1e6da;
+}
+
+.countdown{
+  display:flex;
+  justify-content:center;
+  gap:10px;
+  direction:ltr;
+  margin-top:25px;
+}
+
+.box{
+  width:75px;
+  padding:12px 5px;
+  background:white;
+  border:1px solid #d8c3ad;
+  border-radius:8px;
+}
+
+.box span{
+  display:block;
+  font-size:25px;
+  font-weight:bold;
+  color:#765b47;
+}
+
+.box small{
+  color:#9a7b61;
+}
+
+.music{
+  position:fixed;
+  left:18px;
+  top:18px;
+  z-index:100;
+  width:45px;
+  height:45px;
+  border:none;
+  border-radius:50%;
+  background:#8b7059;
+  color:white;
+  font-size:20px;
+}
+
+footer{
+  padding:40px 20px;
+  text-align:center;
+  font-family:"Amiri",serif;
+  font-size:21px;
+  color:#92745c;
+}
+
+@media(max-width:500px){
+  .names{
+    font-size:52px;
+  }
+
+  .photo{
+    height:360px;
+  }
+
+  .box{
+    width:65px;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<div class="page">
+
+<button class="music" onclick="musicControl()">♪</button>
+
+<audio id="music" loop>
+  <source src="song.mp3" type="audio/mpeg">
+</audio>
+
+
+<!-- البداية -->
+
+<section class="hero">
+
+<div class="subtitle">
+WEDDING INVITATION
+</div>
+
+<div class="names">
+كيرلس
+</div>
+
+<div class="and">
+&
+</div>
+
+<div class="names">
+إيريني
+</div>
+
+<div class="line"></div>
+
+<div class="date">
+24 • 08 • 2026
+</div>
+
+</section>
+
+
+<!-- الآية -->
+
+<section>
+
+<div class="verse">
+
+"الْمَحَبَّةُ لاَ تَسْقُطُ أَبَدًا"
+
+<br>
+
+❤️
+
+</div>
+
+</section>
+
+
+<!-- الدعوة -->
+
+<section>
+
+<div class="invitation">
+
+بكل الحب والفرح
+
+<br>
+
+نتشرف بدعوتكم لمشاركتنا
+
+<br>
+
+أجمل يوم في حياتنا
+
+</div>
+
+<div class="couple">
+
+<div class="label">
+العريس
+</div>
+
+<div class="couple-name">
+كيرلس مجدي
+</div>
+
+</div>
+
+<div class="and">
+&
+</div>
+
+<div class="couple">
+
+<div class="label">
+العروسة
+</div>
+
+<div class="couple-name">
+إير�
